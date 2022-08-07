@@ -10,7 +10,7 @@ Edits from original :
 
 ## Installation
 
-Just run `./install` to install it.
+Just run `./install.sh` to install it.
 You can run `./test-plymouth` to display the current bootsplash theme.
 
 ## Screenshot
