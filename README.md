@@ -1,4 +1,4 @@
-# SE98 1080 Plymouth theme
+# SE98 1920x1080 Plymouth theme
 
 ## Disclaimer
 
