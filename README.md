@@ -2,7 +2,7 @@
 
 ## Disclaimer
 
-I just edited the [Windoze95 1080 Plymouth theme](https://github.com/Liftu/Windoze95-1080-Plymouth-theme) of @Liftu who just edited a work of LASZCZ (https://www.pling.com/p/1202357/)
+I just edited the [Windoze95 1080 Plymouth theme](https://github.com/Liftu/Windoze95-1080-Plymouth-theme) of [Liftu](https://github.com/Liftu) who just edited a work of LASZCZ (https://www.pling.com/p/1202357/)
 
 Edits from original :
 - Change background image.
