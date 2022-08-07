@@ -4,14 +4,14 @@ if ( Plymouth.GetMode () == "boot" )
     Window.SetBackgroundTopColor (0.0, 0.0, 0.0);
     Window.SetBackgroundBottomColor (0.0, 0.0, 0.0);
 
-    logo.image = Image("w95_boot.png");
+    logo.image = Image("logon.png");
     logo.sprite = Sprite(logo.image);
     logo.sprite.SetX (Window.GetWidth()  / 2 - logo.image.GetWidth()  / 2);
     logo.sprite.SetY (Window.GetHeight() / 2 - logo.image.GetHeight() / 2);
     logo.sprite.SetZ (10000);
-    progress = 0;
+    progress = 1;
 
-    progress_box.image = Image("throbber-0" + progress + ".png");
+    progress_box.image = Image("gradient_" + progress + ".png");
     progress_box.sprite = Sprite();
     progress_box.x = Window.GetWidth() / 2 - progress_box.image.GetWidth() / 2;
     progress_box.y = Window.GetHeight() /2 + logo.image.GetHeight() / 2 - progress_box.image.GetHeight();
@@ -30,7 +30,7 @@ else
     logo.opacity_angle = 0;
   }
 
-throbber_anim_rate = 10;            # larger value = slower logo animation.  
+throbber_anim_rate = 2;            # larger value = slower logo animation.  
 throbber_counter = 0;
 
 /* This function gets called continuosly by Plymouth, up to 50 times a second */
@@ -46,10 +46,10 @@ fun refresh ()
         {
           progress++;
 
-          if (progress > 5)
-            progress = 0;
+          if (progress > 47)
+            progress = 1;
 
-          new_progress_box.image = Image("throbber-0" + progress + ".png");
+          new_progress_box.image = Image("gradient_" + progress + ".png");
           progress_box.sprite.SetImage(new_progress_box.image);
           progress_box.sprite.SetOpacity(1);
         }
