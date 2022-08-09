@@ -12,6 +12,13 @@ Edits from Liftu version :
 The theme is very raw (undone). The **logoff** animation is not ready! It's still in **win95** style with **4x3** format.
 ## Installation
 
+Requirements:
+
+- Inkscape
+- ImageMagic
+
+How to install from sources:
+
 - Read the `INSTALL` file.
 - Execute make script by running `./make` or `awk -f make` (autodetect resoluton)
 - Or `./make 1024x768` or `./make 1920x1080 1280x1024 800x600`
