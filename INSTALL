@@ -1,0 +1,9 @@
+SE98 Plymouth theme Installation
+
+To prepare the theme for your resolution run "make" awk script by running "./make" or "awk -f make".
+It will create "se98" subfolder, get resolution of your X or Wayland GUI screen, render the background image and throbber from svg-files.
+When done, run these commands:
+sudo cp -r "$PWD/se98" /usr/share/plymouth/themes
+sudo plymouth-set-default-theme -R se98
+To preview run:
+sudo ./test-plymouth

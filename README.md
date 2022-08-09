@@ -8,10 +8,16 @@ Edits from Liftu version :
 - Change background image.
 - Extra slowed down the progress bar cycle.
 
+*TODO*
+The theme is very raw (undone). The **logoff** animation is not ready! It's still in **win95** style with **4x3** format.
 ## Installation
 
-Just run `./install.sh` to install it.
-You can run `./test-plymouth` to display the current bootsplash theme.
+- Read the `INSTALL` file.
+- Execute make script by running `./make` or `awk -f make` (autodetect resoluton)
+- Or `./make 1024x768` or `./make 1920x1080 1280x1024 800x600`
+- Copy newly created `se98` sub-directory to `/usr/share/plymouth/themes/` directory.
+- Enable it by running `sudo plymouth-set-default-theme -R se98`
+- You can run `./test-plymouth` to display the current bootsplash theme.
 
 ## Screenshot
 
