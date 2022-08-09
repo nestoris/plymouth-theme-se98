@@ -30,7 +30,7 @@ else
     logo.opacity_angle = 0;
   }
 
-throbber_anim_rate = 2;            # larger value = slower logo animation.  
+throbber_anim_rate = %RATE%;            # larger value = slower logo animation.  
 throbber_counter = 0;
 
 /* This function gets called continuosly by Plymouth, up to 50 times a second */

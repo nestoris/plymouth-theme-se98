@@ -107,6 +107,7 @@ function build(file_in,buildfld,file_out,wid_out,hei_out,wid_orig,hei_orig,	cmd1
 	print wid_out
 	spincount=int(wid_out/80) # количество кадров в зависимости от ширины экрана
 	anim_rate=int(48/spincount) # мин. задержка между кадрами
+	anim_rate=anim_rate<1?1:anim_rate
 	cmd6="for ((i=1; i < "spincount"; i++)); do let \"A=$i*"int(wid_out/spincount)"\" && convert "buildfld"/"spinnerbase wid_out"x"hei_out".png -roll "spindir"${A}+0 "buildfld"/"spinnerbase "${i}.png && echo \"  $i of "spincount"\"; done; mv "buildfld"/"spinnerbase wid_out"x"hei_out".png "buildfld"/"spinnerbase spincount".png && echo \"  "spincount" of "spincount"\"" # делаем кадры анимации
 	cmd7="convert "buildfld"/"file_out" -gravity center -extent "wid_out"x"hei_out-grad_hei" "buildfld"/"file_out
 	cmd8="convert "buildfld"/"file_out" -background none -extent "wid_out"x"hei_out" "buildfld"/"file_out
@@ -138,6 +139,7 @@ function build(file_in,buildfld,file_out,wid_out,hei_out,wid_orig,hei_orig,	cmd1
 		gsub("%SHUTDOWN%", "\""logout_out"\"")
 		gsub("%SPINNERBASE%", "\""spinnerbase"\"")
 		gsub("%PROGRESS%", spincount-1)
+		gsub("%RATE%", anim_rate)
 		print > script_out
 	}
 
