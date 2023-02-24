@@ -73,11 +73,14 @@ function size_svg(file,res,		u,cmd){ # узнать размеры вектор�
 
 
 function screenres(){
-	cmd="find /sys/class/drm/*/ -name \"modes\" -exec cat {} \\;|sort -u"
+	cmd="find /sys/class/drm/*/ -name \"modes\" -exec cat {} \\;"
 	while((cmd|getline)>0){
-		out=(f?out:$0)
-		$0?f++:""
-	}
+		if($0 in was){
+		}else{
+			out=(f?out:$0)
+			$0?f++:""}
+			was[$0]
+		}
 	close(cmd)
 	return out
 }
